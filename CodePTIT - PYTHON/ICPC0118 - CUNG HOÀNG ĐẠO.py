@@ -1,63 +1,29 @@
-t = int(input())
-for i in range(t):
-    d, m = [int(x) for x in input().split()]
-    if m == 1:
-        if d < 20:
-            print("Ma Ket")
-        else:
-            print("Bao Binh")
-    elif m == 2:
-        if d < 19:
-            print("Bao Binh")
-        else:
-            print("Song Ngu")
-    elif m == 3:
-        if d < 21:
-            print("Song Ngu")
-        else:
-            print("Bach Duong")
-    elif m == 4:
-        if d < 20:
-            print("Bach Duong")
-        else:
-            print("Kim Nguu")
-    elif m == 5:
-        if d < 21:
-            print("Kim Nguu")
-        else:
-            print("Song Tu")
-    elif m == 6:
-        if d < 21:
-            print("Song Tu")
-        else:
-            print("Cu Giai")
-    elif m == 7:
-        if d < 23:
-            print("Cu Giai")
-        else:
-            print("Su Tu")
-    elif m == 8:
-        if d < 23:
-            print("Su Tu")
-        else:
-            print("Xu Nu")
-    elif m == 9:
-        if d < 23:
-            print("Xu Nu")
-        else:
-            print("Thien Binh")
-    elif m == 10:
-        if d < 23:
-            print("Thien Binh")
-        else:
-            print("Thien Yet")
-    elif m == 11:
-        if d < 23:
-            print("Thien Yet")
-        else:
-            print("Nhan Ma")
-    else:
-        if d < 22:
-            print("Nhan Ma")
-        else:
-            print("Ma Ket")
+import os
+from datetime import date
+def zodiac(Day, Month):
+    if ((int(Month)==12 and int(Day) >= 22)or(int(Month)==1 and int(Day)<= 19)):
+        return 'Ma Ket'
+    elif ((int(Month)==1 and int(Day) >= 20)or(int(Month)==2 and int(Day)<= 18)):
+        return 'Bao Binh'
+    elif ((int(Month)==2 and int(Day) >= 19)or(int(Month)==3 and int(Day)<= 20)):
+        return 'Song Ngu'
+    elif ((int(Month)==3 and int(Day) >= 21)or(int(Month)==4 and int(Day)<= 19)):
+        return 'Bach Duong'
+    elif ((int(Month)==4 and int(Day) >= 20)or(int(Month)==5 and int(Day)<= 20)):
+        return 'Kim Nguu'
+    elif ((int(Month)==5 and int(Day) >= 21)or(int(Month)==6 and int(Day)<= 20)):
+        return 'Song Tu'
+    elif ((int(Month)==6 and int(Day) >= 21)or(int(Month)==7 and int(Day)<= 22)):
+        return 'Cu Giai'
+    elif ((int(Month)==7 and int(Day) >= 23)or(int(Month)==8 and int(Day)<= 22)): 
+        return 'Su Tu'
+    elif ((int(Month)==8 and int(Day) >= 23)or(int(Month)==9 and int(Day)<= 22)): 
+        return 'Xu Nu'
+    elif ((int(Month)==9 and int(Day) >= 23)or(int(Month)==10 and int(Day)<= 22)):
+        return 'Thien Binh'
+    elif ((int(Month)==10 and int(Day) >= 23)or(int(Month)==11 and int(Day)<= 22)): 
+        return 'Thien Yet'
+    else: return 'Nhan Ma'
+for t in range(int(input())):
+    d, m = input().split()
+    print(zodiac(d,m))

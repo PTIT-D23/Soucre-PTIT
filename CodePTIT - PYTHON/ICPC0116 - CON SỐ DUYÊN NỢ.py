@@ -1,3 +1,4 @@
-for case in range(int(input())):
-    str = input()
-    print('YES' if str[0] == str[-1] else 'NO')
+
+for t in range(int(input())):
+    s = input()
+    print('YES') if s[0]==s[-1] else print('NO')

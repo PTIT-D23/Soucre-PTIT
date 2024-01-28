@@ -1,9 +1,6 @@
-def check(s):
-    for i in s:
-        if s < '0' or i > '2':
-            return 'NO'
-    return 'YES'
-
-
 for t in range(int(input())):
-    print(check(input()))
+    def ans(n):
+        for i in n:
+            if '012'.find(i)==-1: return 'NO'
+        return 'YES'
+    print(ans(input()))

@@ -1,13 +1,13 @@
 for t in range(int(input())):
-    a = list(int(i) for i in input())
-    su, mu = 0, 0
-    for i in range(len(a)):
-        if i % 2 == 0:
-            su += a[i]
+    c=0
+    tl=0
+    l=1
+    s=input()
+    for i in range(len(s)):
+        if i%2==0: c+=int(s[i])
         else:
-            if a[i] != 0:
-                if mu == 0:
-                    mu = a[i]
-                else:
-                    mu *= a[i]
-    print(str(su) + " " + str(mu))
+            if s[i]=='0': continue
+            l*=int(s[i])
+            tl=1
+    l*=tl
+    print(f'{c} {l}')

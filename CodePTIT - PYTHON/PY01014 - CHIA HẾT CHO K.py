@@ -1,8 +1,5 @@
-a, k, n = [int(i) for i in input().split()]
-bMin = (int(a / k) + 1) * k - a
-bMax = int(n / k) * k - a
-if bMin <= bMax:
-    for i in range(bMin, bMax + 1, k):
-        print(i, end=' ')
-else:
-    print(-1)
+arr = []
+a,k,n = [int(x) for x in input().split()]
+for i in range(0,n+1,k):
+    if i>a: arr.append(str(i-a))
+print(-1) if arr==[] else print(' '.join(arr))

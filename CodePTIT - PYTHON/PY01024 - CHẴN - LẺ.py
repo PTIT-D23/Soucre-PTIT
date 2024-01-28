@@ -1,12 +1,8 @@
-def check(s):
-    if sum(int(i) for i in s) % 10 != 0:
-        return 'NO'
-    for i in range(len(s) - 1):
-        if abs(ord(s[i]) - ord(s[i + 1])) != 2:
-            return 'NO'
-    return 'YES'
-
-
 for t in range(int(input())):
-    s = input()
-    print(check(s))
+    def check(n):
+        s=int(n[0])
+        for i in range(1,len(n)):
+            if abs(int(n[i]) - int(n[i-1])) != 2: return 'NO'
+            s+=int(n[i])
+        return 'YES' if s%10==0 else 'NO'
+    print(check(input()))

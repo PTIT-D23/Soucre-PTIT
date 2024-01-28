@@ -1,12 +1,5 @@
 import math
-
-
-n, k = [int(i) for i in input().split()]
-lower, upper = 10**(k - 1), 10**k
-count = 0
-for i in range(lower, upper):
-    if math.gcd(n, i) == 1:
-        print(i, end=' ')
-        count += 1
-        if count % 10 == 0:
-            print()
+n,k = input().split()
+arr=[x for x in range(10**(int(k)-1),10**int(k)) if math.gcd(x,int(n))==1]
+for i in range(0,len(arr),10):
+    print(' '.join([str(x) for x in arr[i:i+10]]))

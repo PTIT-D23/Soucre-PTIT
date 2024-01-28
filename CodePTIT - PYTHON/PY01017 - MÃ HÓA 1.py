@@ -1,10 +1,11 @@
 for t in range(int(input())):
-    s = input() + '!'
-    cnt, ch = 0, s[0]
-    for i in s:
-        if i == ch:
-            cnt += 1
-        else:
-            print(str(cnt) + ch, end='')
-            cnt, ch = 1, i
-    print()
+    s=input()
+    i=0
+    while i<len(s):
+        cnt=1
+        while i<len(s)-1 and s[i]==s[i+1]:
+            cnt+=1
+            i+=1
+        print(f'{cnt}{s[i]}',end='')
+        i+=1
+    print('')

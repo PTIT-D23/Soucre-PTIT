@@ -1,5 +1,1 @@
-a = int(input())
-if a % 2 == 0:
-    print("CHAN")
-else:
-    print("LE")
+print('CHAN') if int(input())%2==0 else print("LE")

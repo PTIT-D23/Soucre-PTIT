@@ -1,2 +1,1 @@
-for i in input().split():
-    print(i)
+print('\n'.join(input().split()))

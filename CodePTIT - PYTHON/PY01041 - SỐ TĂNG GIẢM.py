@@ -1,16 +1,8 @@
-def solve(s):
-    if len(s) < 3:
-        return 'NO'
-    ar = list(int(i) for i in s)
-    up = True
-    for i in range(1, len(ar)):
-        if up and ar[i] <= ar[i - 1]:
-            up = False
-        elif not up and ar[i] >= ar[i - 1]:
-            return 'NO'
-    return 'YES'
-
-
 for t in range(int(input())):
-    s = input()
-    print(solve(s))
+    def ans(n):
+        if len(n)<3: return 'NO'
+        i=0
+        while i<len(n)-1 and n[i]<n[i+1]: i+=1
+        while i<len(n)-1 and n[i]>n[i+1]: i+=1
+        return 'YES' if i==len(n)-1 else 'NO'
+    print(ans(input()))

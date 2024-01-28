@@ -1,10 +1,6 @@
-def solve(s):
-    for i in range(2, len(s)):
-        if (s[i] != s[i - 2]):
-            return 'NO'
-    return 'YES'
-
-
 for t in range(int(input())):
-    s = input()
-    print(solve(s))
+    def ans(n):
+        for i in range(1,len(n)):
+            if n[i]==n[i-1] or (i>1 and n[i]!=n[i-2]): return 'NO'
+        return 'YES'
+    print(ans(input()))

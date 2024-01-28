@@ -1,10 +1,7 @@
-def check(a, b):
-    for i in range(1, len(a)):
-        if abs(ord(a[i]) - ord(a[i - 1])) != abs(ord(b[i]) - ord(b[i - 1])):
-            return 'NO'
-    return 'YES'
-
-
 for t in range(int(input())):
-    a = input()
-    print(check(a, a[::-1]))
+    def ok(s):
+        rs=''.join(reversed(s))
+        for i in range(1,len(s)):
+            if abs(ord(s[i])-ord(s[i-1])) != abs(ord(rs[i])-ord(rs[i-1])): return 'NO'
+        return 'YES'
+    print(ok(input()))

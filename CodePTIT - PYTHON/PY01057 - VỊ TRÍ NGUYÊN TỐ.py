@@ -1,23 +1,13 @@
-import math
-
-# chưa hiểu sao dùng hàm này lại WA
-# def isPrime(n):
-#     return n == 2 or n == 3 or n == 5 or n == 7
-
-
-def isPrime(n):
-    for i in range(2, int(math.sqrt(n)) + 1):
-        if n % i == 0:
-            return 0
-    return n > 1
-
-
-def check(s):
+nt = [1 for x in range(505)]
+nt[0]=nt[1]=0
+for i in range(2,505):
+    if nt[i]:
+        for u in range(i,int(505/i)): nt[i*u]=0
+def c(s):
     for i in range(len(s)):
-        if (isPrime(i) and not isPrime(int(s[i]))) or (not isPrime(i) and isPrime(int(s[i]))):
-            return 'NO'
+        if nt[i] and nt[int(s[i])]: continue
+        if not nt[i] and not nt[int(s[i])]: continue
+        return 'NO'
     return 'YES'
-
-
 for t in range(int(input())):
-    print(check(input()))
+    print(c(input()))

@@ -1,1 +1,4 @@
-print(len({input() for i in range(int(input()))}))
+a = set()
+for t in range(int(input())):
+    a.add(input())
+print(len(a))

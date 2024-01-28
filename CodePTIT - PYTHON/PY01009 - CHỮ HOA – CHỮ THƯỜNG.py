@@ -1,10 +1,2 @@
-s = input()
-lower = 0
-for i in s:
-    if i.islower():
-        lower = lower + 1
-
-if lower >= len(s) - lower:
-    print(s.lower())
-else:
-    print(s.upper())
+s=input()
+print(s.lower()) if [x for x in s if x.islower()].__len__()*2 >= s.__len__() else print(s.upper())

@@ -1,16 +1,13 @@
 for t in range(int(input())):
-    n = int(input())
-    l = sorted([int(i) for i in input().split()])
-    res = 0
-    for i in range(n-2):
-        left, right = i+1, n-1
-        while left < right:
-            tmp = l[i] + l[left] + l[right]
-            if not tmp:
-                res += 1
-                left += 1
-            elif tmp < 0:
-                left += 1
-            else:
-                right -= 1
-    print(res)
+    n, cnt= int(input()), 0
+    a = sorted([int(x) for x in input().split()])
+    for i in range(n):
+        l, r = i+1, n-1
+        while l < r:
+            s = a[l] + a[i] + a[r]
+            if s == 0: 
+                cnt += 1
+                l += 1
+            elif s > 0: r -= 1
+            else: l += 1
+    print(cnt)

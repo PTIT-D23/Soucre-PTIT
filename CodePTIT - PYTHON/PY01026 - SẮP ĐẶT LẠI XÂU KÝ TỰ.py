@@ -1,4 +1,4 @@
 for t in range(int(input())):
-    a = sorted(input())
-    b = sorted(input())
-    print('Test ' + str(t + 1) + ': ' + ('YES' if a == b else 'NO'))
+    a = [i for i in input()]
+    b = [i for i in input()]
+    print(f'Test {t+1}: ' + ('YES' if sorted(a) == sorted(b) else 'NO'))

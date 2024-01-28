@@ -1,15 +1,10 @@
-def isValid(s):
-    if len(s) % 2 == 1 or s != s[::-1]:
-        return False
-    for i in s:
-        if int(i) % 2 == 1:
-            return False
-    return True
-
+arr = []
+def Try(i,n,s):
+    if s!= "" and s[0]=='0': return
+    if i==n: return arr.append(s+''.join(reversed(s)))
+    for j in range(0,9,2): Try(i+1,n,s+str(j))
+for i in range(1,5): Try(0,i,'')
 
 for t in range(int(input())):
-    n = int(input())
-    for i in range(22, n, 2):
-        if isValid(str(i)):
-            print(i, end=' ')
-    print()
+    n=int(input())
+    print(' '.join([x for x in arr if(int(x)<n)]))

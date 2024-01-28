@@ -2,7 +2,7 @@
 
 Cào cốt đã AC trên <a href="https://code.ptit.edu.vn/">Code PTIT <img style="height: 64px;" src="https://code.ptit.edu.vn/2020/images/logo_ptit.png"></a>
 
-Ví dụ: https://github.com/KiyoGami/Python-PTIT
+Ví dụ: https://github.com/khaiCybersec/Soucre-PTIT/tree/main/Python-PTIT
 
 Chương trình sẽ cào cốt tốt nhất của bạn (theo thời gian, bộ nhớ)
 
@@ -65,4 +65,4 @@ bật True thì những bài cào rồi sẽ k cào lại nữa
 
 **Note:** Nếu sleep liên tục thì bạn nên tạm dừng chương trình (Ctrl+C), rồi đợi lúc sau cào tiếp. 
 
-## Nyagami
+## khaicyber

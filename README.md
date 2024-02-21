@@ -1,5 +1,5 @@
 # Hello
--Theo dõi github đẻ ủng hộ mình nhé  https://github.com/khaiCybersec/
+-Theo dõi github đẻ ủng hộ mình nhé  https://github.com/khaicyber/
 - Trong này có một ít code mình luyện tập từ các trang như `Code PTIT`, `SPOJ PTIT`, `IT PTIT` và `Luyen Code`.
 - Hướng giải quyết có thể chưa tối ưu, code chỉ mang tính chất tham khảo!
 
